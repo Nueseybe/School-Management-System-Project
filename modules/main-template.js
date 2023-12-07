@@ -6,9 +6,6 @@ function init() {
     mainContainer.innerHTML = mainTemplate();
 }
 
-// function addSideMenu(content) {
-//     getElement().innerHTML = content;
-// }
 function addNavbarMenu(content){
     getElementNavbar().innerHTML = content;
 }
