@@ -5,6 +5,6 @@ export default function template(){
             <div class="d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary" id="sidebar-menu"></div>
             <div class="flex-grow-1 p-3 bg-body-primary" id="content"></div>
         </main>
-        <footer class="d-flex flex-wrap justify-content-center align-items-center py-3 my-3 border-top mt-auto"></footer>
+        <footer class="d-flex flex-wrap justify-content-center align-items-center py-3 my-3 border-top mt-auto" id="footer"></footer>
     `
 }
