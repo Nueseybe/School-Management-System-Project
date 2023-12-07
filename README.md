@@ -1,4 +1,6 @@
 # School-Management-System-Project
+live: https://nueseybe.github.io/School-Management-System-Project/
+
 Functionality
 Display, edit, delete and create for students, classes, teachers.
 Optional: Grades view
