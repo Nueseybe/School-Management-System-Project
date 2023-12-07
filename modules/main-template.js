@@ -12,8 +12,9 @@ function addNavbarMenu(content){
 function addSidebarMenu(content){
     getElementSideBar().innerHTML = content;
 }
-
-
+function addFooter(content){
+    getElementFooter().innerHTML = content;
+}
 function addEventListenerSideBar() {
     getElementSideBar().addEventListener('click', function (event) {
         switch (event.target.nodeName) {
@@ -59,10 +60,15 @@ function getElementSideBar(){
     return document.querySelector('#sidebar-menu')
 }
 
+function getElementFooter(){
+    return document.querySelector('#footer')
+}
+
 export default {
     init,
     addNavbarMenu,
     addSidebarMenu,
+    addFooter,
     addEventListenerSideBar,
     addEventListenerNavBar
 }
