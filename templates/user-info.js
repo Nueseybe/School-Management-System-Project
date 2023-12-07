@@ -11,8 +11,8 @@ export default function template(){
                 </div>
             </div>
             <div class="row ">
-                <p class="d-flex justify-content-end">student.name</p>
-                <p class="d-flex justify-content-end">logout</p>
+                <p class="d-flex justify-content-end">Nüseybe Karakurt</p>
+                <a href="#"><p class="d-flex justify-content-end">logout</p></a>
             </div>
         </div>
     `
