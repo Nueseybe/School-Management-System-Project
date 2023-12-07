@@ -12,6 +12,9 @@ function addNavbarMenu(content){
 function addSidebarMenu(content){
     getElementSideBar().innerHTML = content;
 }
+function addUserInfo(content){
+    getElementUserInfo().innerHTML = content;
+}
 function addFooter(content){
     getElementFooter().innerHTML = content;
 }
@@ -57,17 +60,22 @@ function getElementNavbar(){
 }
 
 function getElementSideBar(){
-    return document.querySelector('#sidebar-menu')
+    return document.querySelector('#sidebar-menu');
+}
+
+function getElementUserInfo(){
+    return document.querySelector('#user-info');
 }
 
 function getElementFooter(){
-    return document.querySelector('#footer')
+    return document.querySelector('#footer');
 }
 
 export default {
     init,
     addNavbarMenu,
     addSidebarMenu,
+    addUserInfo,
     addFooter,
     addEventListenerSideBar,
     addEventListenerNavBar
