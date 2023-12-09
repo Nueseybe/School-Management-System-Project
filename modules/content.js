@@ -5,6 +5,7 @@ import awsCloudPageTemplate from "../templates/pages/aws-cloud.js";
 import teachersPageTemplate from "../templates/pages/teachers.js";
 import studentsPageTemplate from "../templates/pages/students.js";
 import classesPageTemplate from "../templates/pages/classes.js";
+import homePageTemplate from "../templates/pages/home.js";
 
 function webEngineeringPage(){
     render(webEngineeringPageTemplate());
@@ -38,6 +39,9 @@ function render(content){
     document.getElementById('content').innerHTML = content;
 }
 
+function homePage(){
+    render(homePageTemplate());
+}
 
 export default {
     webEngineeringPage,
@@ -46,5 +50,6 @@ export default {
     pythonPage,
     teachersPage,
     studentsPage,
-    classesPage
+    classesPage,
+    homePage
 }
