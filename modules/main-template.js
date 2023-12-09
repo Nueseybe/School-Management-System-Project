@@ -28,7 +28,6 @@ function addEventListenerSideBar() {
             liElement.addEventListener('click', function (event) {
                 const clickedId = liElement.id;
                 window.location.hash = clickedId;
-                console.log(clickedId)
                 switch (clickedId) {
                     case 'web-engineering':
                         content.webEngineeringPage();
@@ -60,7 +59,6 @@ function addEventListenerNavBar() {
             liElement.addEventListener('click', function (event) {
                 const clickedId = liElement.id;
                 window.location.hash = clickedId;
-                console.log(clickedId)
                 switch (clickedId) {
                     case 'home':
                         content.homePage();
