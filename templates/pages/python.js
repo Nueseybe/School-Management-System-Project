@@ -1,3 +1,5 @@
 export default function template(employee){
-    return ``
+    return `
+    <h1> PYTHON PAGE </h1>
+`
 }
