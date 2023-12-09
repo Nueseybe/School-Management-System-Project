@@ -18,23 +18,37 @@ function addUserInfo(content){
 function addFooter(content){
     getElementFooter().innerHTML = content;
 }
+
 function addEventListenerSideBar() {
-    getElementSideBar().addEventListener('click', function (event) {
-        switch (event.target.nodeName) {
-            case 'web-enginering':
-                content.webEngineeringPage();
-                break;
-            case 'aws-cloud':
-                content.awsCloudPage();
-                break;
-            case 'python':
-                content.pythonPage();
-                break;
-            case 'data-science':
-                content.dataSciencePage();
-                break;
-        }
-    });
+    const sidemenuEvent = document.getElementById("sidemenu-event");
+
+    if (sidemenuEvent) {
+        const liElements = sidemenuEvent.querySelectorAll("li");
+        liElements.forEach(function (liElement) {
+            liElement.addEventListener('click', function (event) {
+                const clickedId = liElement.id;
+                window.location.hash = clickedId;
+                console.log(clickedId)
+                switch (clickedId) {
+                    case 'web-engineering':
+                        content.webEngineeringPage();
+                        break;
+                    case 'aws-cloud':
+                        content.awsCloudPage();
+                        break;
+                    case 'python':
+                        content.pythonPage();
+                        break;
+                    case 'data-science':
+                        content.dataSciencePage();
+                        break;
+                    default:
+                        content.notFoundPage();
+                }
+            });
+        });
+    } else {
+    }
 }
 
 function addEventListenerNavBar() {
