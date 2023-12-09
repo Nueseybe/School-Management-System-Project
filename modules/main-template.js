@@ -52,21 +52,36 @@ function addEventListenerSideBar() {
 }
 
 function addEventListenerNavBar() {
-    getElementNavbar().addEventListener('click', function (event) {
-        switch (event.target.nodeName) {
-            case 'teachers':
-                content.teachersPage();
-                break;
-            case 'students':
-                content.studentsPage();
-                break;
-            case 'classes':
-                content.classesPage();
-                break;
-            default:
-                content.notFoundPage();
-        }
-    });
+    const navbarEvent = document.getElementById("navbar-event");
+
+    if (navbarEvent) {
+        const liElements = navbarEvent.querySelectorAll("li");
+        liElements.forEach(function (liElement) {
+            liElement.addEventListener('click', function (event) {
+                const clickedId = liElement.id;
+                window.location.hash = clickedId;
+                console.log(clickedId)
+                switch (clickedId) {
+                    case 'home':
+                        content.homePage();
+                        break;
+                    case 'teachers':
+                        content.teachersPage();
+                        break;
+                    case 'students':
+                        content.studentsPage();
+                        break;
+                    case 'classes':
+                        content.classesPage();
+                        break;
+                    default:
+                        content.notFoundPage();
+                }
+            });
+        });
+    } else {
+        console.log("#sidemenu-event not found");
+    }
 }
 
 function getElementNavbar(){
