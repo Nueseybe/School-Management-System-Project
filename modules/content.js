@@ -6,6 +6,7 @@ import teachersPageTemplate from "../templates/pages/teachers.js";
 import studentsPageTemplate from "../templates/pages/students.js";
 import classesPageTemplate from "../templates/pages/classes.js";
 import homePageTemplate from "../templates/pages/home.js";
+import userInfoPageTemplate from "../../deneme/user-info.js";
 
 function webEngineeringPage(){
     render(webEngineeringPageTemplate());
@@ -35,13 +36,18 @@ function classesPage(){
     render(classesPageTemplate());
 }
 
+function homePage(){
+    render(homePageTemplate());
+}
+
+function userInfoPage(){
+    render(userInfoPageTemplate());
+}
+
 function render(content){
     document.getElementById('content').innerHTML = content;
 }
 
-function homePage(){
-    render(homePageTemplate());
-}
 
 export default {
     webEngineeringPage,
@@ -51,5 +57,6 @@ export default {
     teachersPage,
     studentsPage,
     classesPage,
-    homePage
+    homePage,
+    userInfoPage
 }
