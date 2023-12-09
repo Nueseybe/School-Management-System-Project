@@ -11,7 +11,8 @@ acs.init = () =>{
     mainTemplate.addSidebarMenu(sideMenu.render());
     mainTemplate.addUserInfo(userInfo.render());
     mainTemplate.addFooter(footer.render());
-    mainTemplate.addEventListener();
+    mainTemplate.addEventListenerSideBar(),
+    mainTemplate.addEventListenerNavBar()
 }
 
 acs.init()
