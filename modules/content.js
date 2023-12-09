@@ -6,7 +6,7 @@ import teachersPageTemplate from "../templates/pages/teachers.js";
 import studentsPageTemplate from "../templates/pages/students.js";
 import classesPageTemplate from "../templates/pages/classes.js";
 import homePageTemplate from "../templates/pages/home.js";
-import userInfoPageTemplate from "../../deneme/user-info.js";
+import userInfoPageTemplate from "../templates/pages/user-info.js";
 
 function webEngineeringPage(){
     render(webEngineeringPageTemplate());
