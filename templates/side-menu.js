@@ -4,7 +4,7 @@ export default function template(){
         <hr>
         <span class="fs-4">Courses</span>
         <hr>
-        <ul class="nav nav-pills flex-column mb-auto">
+        <ul class="nav nav-pills flex-column mb-auto" id="sidemenu-event">
             <li class="nav-item" id="web-engineering">
                 <a href="#" class="nav-link link-body-emphasis">
                     Web Engineering
