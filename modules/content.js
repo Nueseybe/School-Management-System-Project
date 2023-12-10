@@ -43,7 +43,9 @@ function studentsPage(){
 }
 
 function classesPage(){
-    render(classesPageTemplate());
+    const classTemplate = classesData
+        .map((cls)=>classesPageTemplate(cls)).join("");
+    render(classTemplate);
 }
 
 function homePage(){
@@ -55,7 +57,7 @@ function userInfoPage(){
 }
 
 function render(content){
-    document.getElementById('content').innerHTML = content;
+    document.getElementById('page-info').innerHTML = content;
 }
 
 
