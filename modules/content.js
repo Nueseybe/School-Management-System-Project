@@ -31,7 +31,9 @@ function pythonPage(){
 }
 
 function teachersPage(){
-    render(teachersPageTemplate());
+    const teacherTemplate = teachersData
+        .map((teacher)=>teachersPageTemplate(teacher)).join("");
+    render(teacherTemplate)
 }
 
 function studentsPage(){
