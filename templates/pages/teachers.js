@@ -1,13 +1,11 @@
-export default function teachersItems(item){
+export default function template(teacher){
     return `
-
-    <h1> TEACHERS PAGE </h1>
-    <div class="card content-column-body m-5" style="width: 18rem;">
-        <div class="card-body ">
-        <h4 class="card-title"></h5>
-        <p class="card-text"></p>
-        <a href="#" class="btn btn-primary">Details</a>
+        <div class="card content-column-body m-4" style="width: 18rem;">
+            <div class="card-body ">
+            <h4 class="card-title">${teacher.name}</h4>
+            <p class="card-text">${teacher.department}</p>
+            <a href="#" class="btn btn-primary">Edit</a>
+            </div>
         </div>
-    </div>
     `
 }

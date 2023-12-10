@@ -1,4 +1,4 @@
-import mainTemplate from '../templates/user-info.js'
+import mainTemplate from '../templates/pages/user-info.js'
  
  
 export default {

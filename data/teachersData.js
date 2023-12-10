@@ -1,4 +1,4 @@
-export default teachersData =[
+const teachersData =[
     { 
         id: 1,
         name: "Ahmet Yılmaz", 
@@ -51,3 +51,5 @@ export default teachersData =[
         department: "AWS Cloud" 
     }
 ]
+
+export default teachersData;

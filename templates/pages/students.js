@@ -1,12 +1,10 @@
-export default function studentItems (item){
+export default function template (student){
     return `
-
-        <h1> STUDENTS PAGE </h1>
-        <div class="card content-column-body m-5" style="width: 18rem;">
+        <div class="card content-column-body m-4" style="width: 18rem;">
             <div class="card-body ">
-            <h4 class="card-title"></h5>
-            <p class="card-text"></p>
-            <a href="#" class="btn btn-primary">Details</a>
+                <h4 class="card-title">${student.name}</h4>
+                    <p class="card-text">${student.courses}</p>
+                <a href="#" class="btn btn-primary" id="edit-student">Edit</a>
             </div>
         </div>
         

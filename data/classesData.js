@@ -1,5 +1,4 @@
-
-export default classesData = [
+const classesData = [
     {
         id: 101, 
         className: "Web Development",
@@ -36,3 +35,5 @@ export default classesData = [
         }]  
     }
 ]
+
+export default classesData;

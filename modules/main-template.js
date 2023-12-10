@@ -18,17 +18,17 @@ function addUserInfo(content){
 function addFooter(content){
     getElementFooter().innerHTML = content;
 }
-
+function addMain(content){
+    getElementMain().innerHTML = content;
+}
 function addEventListenerSideBar() {
     const sidemenuEvent = document.getElementById("sidemenu-event");
-
     if (sidemenuEvent) {
         const liElements = sidemenuEvent.querySelectorAll("li");
         liElements.forEach(function (liElement) {
             liElement.addEventListener('click', function (event) {
                 const clickedId = liElement.id;
                 window.location.hash = clickedId;
-                console.log(clickedId)
                 switch (clickedId) {
                     case 'web-engineering':
                         content.webEngineeringPage();
@@ -47,20 +47,17 @@ function addEventListenerSideBar() {
                 }
             });
         });
-    } else {
-    }
+    } 
 }
 
 function addEventListenerNavBar() {
     const navbarEvent = document.getElementById("navbar-event");
-
     if (navbarEvent) {
         const liElements = navbarEvent.querySelectorAll("li");
         liElements.forEach(function (liElement) {
             liElement.addEventListener('click', function (event) {
                 const clickedId = liElement.id;
                 window.location.hash = clickedId;
-                console.log(clickedId)
                 switch (clickedId) {
                     case 'home':
                         content.homePage();
@@ -79,9 +76,7 @@ function addEventListenerNavBar() {
                 }
             });
         });
-    } else {
-        console.log("#sidemenu-event not found");
-    }
+    } 
 }
 
 function getElementNavbar(){
@@ -100,12 +95,17 @@ function getElementFooter(){
     return document.querySelector('#footer');
 }
 
+function getElementMain(){
+    return document.querySelector('#page-info')
+}
+
 export default {
     init,
     addNavbarMenu,
     addSidebarMenu,
     addUserInfo,
     addFooter,
+    addMain,
     addEventListenerSideBar,
     addEventListenerNavBar
 }

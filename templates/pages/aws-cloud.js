@@ -1,3 +1,5 @@
 export default function template(employee){
-    return ``
+    return `
+    <h1> AWS - CLOUD PAGE </h1>
+`
 }

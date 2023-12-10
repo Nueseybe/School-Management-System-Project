@@ -6,9 +6,16 @@ import teachersPageTemplate from "../templates/pages/teachers.js";
 import studentsPageTemplate from "../templates/pages/students.js";
 import classesPageTemplate from "../templates/pages/classes.js";
 import homePageTemplate from "../templates/pages/home.js";
+import userInfoPageTemplate from "../templates/pages/user-info.js";
+import classesData from "../data/classesData.js";
+import studentsData from "../data/studentsData.js";
+import teachersData from "../data/teachersData.js";
+import coursesData from "../data/coursesData.js";
 
 function webEngineeringPage(){
-    render(webEngineeringPageTemplate());
+    const webEngineeringTemplate = coursesData
+        .map((webEngineer)=>webEngineeringPageTemplate(webEngineer))
+    render(webEngineeringTemplate)
 }
 
 function dataSciencePage(){
@@ -24,24 +31,35 @@ function pythonPage(){
 }
 
 function teachersPage(){
-    render(teachersPageTemplate());
+    const teacherTemplate = teachersData
+        .map((teacher)=>teachersPageTemplate(teacher)).join("");
+    render(teacherTemplate)
 }
 
 function studentsPage(){
-    render(studentsPageTemplate());
+    const studentTemplate = studentsData
+        .map((student)=>studentsPageTemplate(student)).join("");
+    render(studentTemplate);
 }
 
 function classesPage(){
-    render(classesPageTemplate());
-}
-
-function render(content){
-    document.getElementById('content').innerHTML = content;
+    const classTemplate = classesData
+        .map((cls)=>classesPageTemplate(cls)).join("");
+    render(classTemplate);
 }
 
 function homePage(){
     render(homePageTemplate());
 }
+
+function userInfoPage(){
+    render(userInfoPageTemplate());
+}
+
+function render(content){
+    document.getElementById('page-info').innerHTML = content;
+}
+
 
 export default {
     webEngineeringPage,
@@ -51,5 +69,6 @@ export default {
     teachersPage,
     studentsPage,
     classesPage,
-    homePage
+    homePage,
+    userInfoPage
 }
