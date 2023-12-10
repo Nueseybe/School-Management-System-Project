@@ -37,7 +37,9 @@ function teachersPage(){
 }
 
 function studentsPage(){
-    render(studentsPageTemplate());
+    const studentTemplate = studentsData
+        .map((student)=>studentsPageTemplate(student)).join("");
+    render(studentTemplate);
 }
 
 function classesPage(){
