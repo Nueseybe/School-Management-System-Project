@@ -1,7 +1,5 @@
-export default function template(employee){
+export default function template(web){
     return `
-        <h1> COURSE INFORMATION PAGE </h1>
-        
             <div class="row mt-5 content-column-body" id="tab">
                 <nav>
                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
