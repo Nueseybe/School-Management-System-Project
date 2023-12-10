@@ -1,4 +1,4 @@
-export default function template(employee){
+export default function template(cls){
     return `
         <div class="row">
             <div class="col-sm-6 mb-3 mb-sm-0">

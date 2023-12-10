@@ -1,4 +1,4 @@
-export default function studentItems (item){
+export default function template (student){
     return `
         <div class="card content-column-body m-4" style="width: 18rem;">
             <div class="card-body ">
