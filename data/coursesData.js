@@ -1,4 +1,4 @@
-export default coursesData = [
+const coursesData = [
     {
         className: "Web Development",
         details: [{
@@ -71,3 +71,4 @@ export default coursesData = [
     }
 ]
 
+export default coursesData;

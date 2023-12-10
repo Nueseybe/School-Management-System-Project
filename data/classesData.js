@@ -1,7 +1,7 @@
 const classesData = [
     {
         id: 101, 
-        className: "Web Development",
+        className: "Web Engineering",
         details: [{
             course101A: "HTML",
             course101B: "CSS",
@@ -27,7 +27,7 @@ const classesData = [
     },
     { 
         id: 104, 
-        coursName: "AWS Cloud", 
+        className: "AWS Cloud", 
         details:[{
             course104A :"IAM",
             course104B : "EC2",
