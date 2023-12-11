@@ -60,6 +60,9 @@ function render(content){
     document.getElementById('page-info').innerHTML = content;
 }
 
+function addStudentsPage(){
+    addStudentsPageTemplate();
+}
 
 export default {
     webEngineeringPage,
@@ -70,5 +73,6 @@ export default {
     studentsPage,
     classesPage,
     homePage,
-    userInfoPage
+    userInfoPage,
+    addStudentsPage
 }
