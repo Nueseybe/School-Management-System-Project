@@ -79,6 +79,32 @@ function addEventListenerNavBar() {
     } 
 }
 
+function addEventItemsToData() {
+    const addEvent = document.getElementById("add-event");
+    if (addEvent) {
+        addEvent.addEventListener('click', function (event) {
+            const hashValue = window.location.hash;
+            switch (hashValue) {
+                case "#students":
+                    console.log("take buton")
+                    openStudentsModal();        
+                    break;
+            }
+        })
+    }
+}
+
+function openStudentsModal(){
+    const studentsModal = document.getElementById("studentaddModal");
+    const myInput=document.getElementById("addStudent")
+    if (studentsModal) {
+      studentsModal.addEventListener('shown.bs.modal', () => {
+            myInput.focus()
+          })
+    }
+ }
+
+
 function getElementNavbar(){
     return document.querySelector('#navbar-menu');
 }
@@ -107,5 +133,7 @@ export default {
     addFooter,
     addMain,
     addEventListenerSideBar,
-    addEventListenerNavBar
+    addEventListenerNavBar,
+    addEventItemsToData,
+    openStudentsModal
 }
