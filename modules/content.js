@@ -6,7 +6,7 @@ import teachersPageTemplate from "../templates/pages/teachers.js";
 import studentsPageTemplate from "../templates/pages/students.js";
 import classesPageTemplate from "../templates/pages/classes.js";
 import homePageTemplate from "../templates/pages/home.js";
-import userInfoPageTemplate from "../templates/pages/user-info.js";
+import userInfoPageTemplate from "../templates/user-info.js";
 import classesData from "../data/classesData.js";
 import studentsData from "../data/studentsData.js";
 import teachersData from "../data/teachersData.js";

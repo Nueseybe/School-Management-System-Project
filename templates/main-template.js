@@ -15,5 +15,4 @@ export default function template(){
         </main>
         <footer class="d-flex flex-wrap justify-content-end align-items-center py-3 my-3 border-top mt-auto" id="footer"></footer>
     `
-    `
 }
