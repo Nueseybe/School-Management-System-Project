@@ -6,7 +6,7 @@ export default function template(){
             </div>
             <div class="col-md-7 d-flex align-item-end justify-content-end ">
                 <div class="row">
-                    <img src="./images/student_icon/user-icon-03.png">
+                    <img src="./images/student_icon/user-icon-08.png">
                 </div>
             </div>
             <div class="row ">
