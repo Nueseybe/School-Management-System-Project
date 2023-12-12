@@ -5,7 +5,7 @@ export default function template(cls){
                 <div class="card content-column-body m-4" style="width: 18rem;">
                     <div class="card-body ">
                     <h4 class="card-title">${cls.className}</h4>
-                    <p class="card-text"></p>
+                    <p class="card-text">${cls.details}</p>
                     <a href="#" class="btn btn-primary">Details</a>
                     </div>    
                 </div>
