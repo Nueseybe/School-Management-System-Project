@@ -16,6 +16,7 @@ acs.init = () =>{
     mainTemplate.addEventListenerSideBar(),
     mainTemplate.addEventListenerNavBar(),
     mainTemplate.addEventItemsToData();
+    mainTemplate.saveNewStudent()
 }
 
 acs.init()
