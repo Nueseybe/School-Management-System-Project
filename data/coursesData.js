@@ -17,7 +17,9 @@ const coursesData = [
                 time : "10 Weeks",
                 information: "JavaScript is the Programming Language for the Web. /n JavaScript can update and change both HTML and CSS. /n JavaScript can calculate, manipulate and validate data."
             }]
-        }],
+        }]
+    },
+    {
         className: "Python",
         details: [{
             first: [{
@@ -35,7 +37,9 @@ const coursesData = [
                 time : "1 Weeks",
                 information: "Scrapy"
             }]
-        }],
+        }]
+    },
+    {
         className: "Data Science",
         details: [{
             first: [{
@@ -53,7 +57,9 @@ const coursesData = [
                 time : "7 Weeks",
                 information: ""
             }]
-        }],
+        }]
+    },
+    {
         className: "Aws-Cloud",
         details: [{
             first: [{
