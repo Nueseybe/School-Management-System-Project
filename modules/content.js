@@ -7,6 +7,8 @@ import studentsPageTemplate from "../templates/pages/students.js";
 import classesPageTemplate from "../templates/pages/classes.js";
 import homePageTemplate from "../templates/pages/home.js";
 import userInfoPageTemplate from "../templates/user-info.js";
+import addStudentsPageTemplate from "../templates/add-student.js";
+import addTeachersPageTemplate from "../templates/add-teacher.js";
 import classesData from "../data/classesData.js";
 import studentsData from "../data/studentsData.js";
 import teachersData from "../data/teachersData.js";
@@ -56,6 +58,15 @@ function userInfoPage(){
     render(userInfoPageTemplate());
 }
 
+function addStudentsPage() {
+    render(addStudentsPageTemplate());
+}
+
+function addTeachersPage() {
+    render(addTeachersPageTemplate());
+}
+
+
 function render(content){
     document.getElementById('page-info').innerHTML = content;
 }
@@ -74,5 +85,6 @@ export default {
     classesPage,
     homePage,
     userInfoPage,
-    addStudentsPage
+    addStudentsPage,
+    addTeachersPage
 }
