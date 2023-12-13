@@ -1,20 +1,20 @@
-export default function template(web){
+
+export default function template(course){
+   
     return `
-            <div class="row mt-5 content-column-body" id="tab">
-                <nav>
-                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-html" type="button" role="tab" aria-controls="course-name" aria-selected="true">HTML</button>
-                    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-css" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">CSS</button>
-                    <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-js" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">JavaScript</button>
-                    
-                    </div>
-                </nav>
-                <div class="tab-content" id="nav-tabContent">
-                    <div class="tab-pane fade show active" id="nav-html" role="tabpanel" aria-labelledby="nav-html-tab" tabindex="0">HTML</div>
-                    <div class="tab-pane fade" id="nav-css" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">CSS</div>
-                    <div class="tab-pane fade" id="nav-js" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">JavaScript</div>
-                </div>
-            </div>
-        
-    `
+     <div class="row">
+         <div class="col-sm-6 mb-3 mb-sm-0">
+             <div class="card content-column-body m-4" style="width: 18rem;">
+                 <h4 class="card-title">${course.className}</h4>
+                     ${course.details.map((detail) => `
+                         <p class="card-text">Course Name: ${detail.courseName}</p>
+                         <p class="card-text">Time: ${detail.time}</p>
+                         <p class="card-text">Information: ${detail.information}</p>
+                     `).join('')}
+                 </div>    
+             </div>
+         </div>
+     </div>    
+ `
 }
+
