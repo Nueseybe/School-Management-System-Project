@@ -6,21 +6,22 @@ function init() {
     mainContainer.innerHTML = mainTemplate();
 }
 
-function addNavbarMenu(content){
+function addNavbarMenu(content) {
     getElementNavbar().innerHTML = content;
 }
-function addSidebarMenu(content){
+function addSidebarMenu(content) {
     getElementSideBar().innerHTML = content;
 }
-function addUserInfo(content){
+function addUserInfo(content) {
     getElementUserInfo().innerHTML = content;
 }
-function addFooter(content){
+function addFooter(content) {
     getElementFooter().innerHTML = content;
 }
-function addMain(content){
+function addMain(content) {
     getElementMain().innerHTML = content;
 }
+
 function addEventListenerSideBar() {
     const sidemenuEvent = document.getElementById("sidemenu-event");
     if (sidemenuEvent) {
@@ -29,6 +30,7 @@ function addEventListenerSideBar() {
             liElement.addEventListener('click', function (event) {
                 const clickedId = liElement.id;
                 window.location.hash = clickedId;
+                console.log(clickedId)
                 switch (clickedId) {
                     case 'web-engineering':
                         content.webEngineeringPage();
@@ -47,7 +49,7 @@ function addEventListenerSideBar() {
                 }
             });
         });
-    } 
+    }
 }
 
 function addEventListenerNavBar() {
@@ -76,7 +78,7 @@ function addEventListenerNavBar() {
                 }
             });
         });
-    } 
+    }
 }
 
 function addEventItemsToData() {
@@ -86,9 +88,12 @@ function addEventItemsToData() {
             const hashValue = window.location.hash;
             switch (hashValue) {
                 case "#students":
-                    console.log("take buton")
-                    openStudentsModal();        
+                    console.log("students clicked")
+                    addNewStudentsPage();
                     break;
+                case "#teachers":
+                    console.log("teachers clicked");
+                    addNewTeachersPage()
             }
         })
     }
@@ -159,24 +164,19 @@ function saveNewTeacher() {
     });
 }
 
-
-function getElementNavbar(){
+function getElementNavbar() {
     return document.querySelector('#navbar-menu');
 }
-
-function getElementSideBar(){
-    return document.querySelector('#sidebar-menu');
+function getElementSideBar() {
+    return document.querySelector('#sidebar-menu')
 }
-
-function getElementUserInfo(){
-    return document.querySelector('#user-info');
+function getElementUserInfo() {
+    return document.querySelector('#user-info')
 }
-
-function getElementFooter(){
-    return document.querySelector('#footer');
+function getElementFooter() {
+    return document.querySelector('#footer')
 }
-
-function getElementMain(){
+function getElementMain() {
     return document.querySelector('#page-info')
 }
 
