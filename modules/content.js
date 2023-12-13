@@ -14,47 +14,49 @@ import studentsData from "../data/studentsData.js";
 import teachersData from "../data/teachersData.js";
 import coursesData from "../data/coursesData.js";
 
-function webEngineeringPage(){
+function webEngineeringPage() {
     const webEngineeringTemplate = coursesData
-        .map((webEngineer)=>webEngineeringPageTemplate(webEngineer))
+        .map((webEngineer) => webEngineeringPageTemplate(webEngineer)).join("")
     render(webEngineeringTemplate)
 }
 
-function dataSciencePage(){
-    render(dataSciencePageTemplate());
+function dataSciencePage() {
+    const dataScienceTemplate = coursesData
+        .map((clsName) => dataSciencePageTemplate(clsName)).join("")
+    render(dataScienceTemplate);
 }
 
-function awsCloudPage(){
+function awsCloudPage() {
     render(awsCloudPageTemplate());
 }
 
-function pythonPage(){
+function pythonPage() {
     render(pythonPageTemplate());
 }
 
-function teachersPage(){
+function teachersPage() {
     const teacherTemplate = teachersData
-        .map((teacher)=>teachersPageTemplate(teacher)).join("");
+        .map((teacher) => teachersPageTemplate(teacher)).join("");
     render(teacherTemplate)
 }
 
-function studentsPage(){
+function studentsPage() {
     const studentTemplate = studentsData
-        .map((student)=>studentsPageTemplate(student)).join("");
+        .map((student) => studentsPageTemplate(student)).join("");
     render(studentTemplate);
 }
 
-function classesPage(){
+function classesPage() {
     const classTemplate = classesData
-        .map((cls)=>classesPageTemplate(cls)).join("");
+        .map((cls) => classesPageTemplate(cls)).join("");
     render(classTemplate);
 }
 
-function homePage(){
+function homePage() {
     render(homePageTemplate());
 }
 
-function userInfoPage(){
+function userInfoPage() {
     render(userInfoPageTemplate());
 }
 
@@ -66,8 +68,7 @@ function addTeachersPage() {
     render(addTeachersPageTemplate());
 }
 
-
-function render(content){
+function render(content) {
     document.getElementById('page-info').innerHTML = content;
 }
 
