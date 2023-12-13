@@ -94,15 +94,70 @@ function addEventItemsToData() {
     }
 }
 
-function openStudentsModal(){
-    const studentsModal = document.getElementById("studentaddModal");
-    const myInput=document.getElementById("addStudent")
-    if (studentsModal) {
-      studentsModal.addEventListener('shown.bs.modal', () => {
-            myInput.focus()
-          })
-    }
- }
+function detailButtonOfClass() {
+    const homePageClassDetail = document.querySelector("#class-detail-btn");
+    homePageClassDetail.addEventListener('click', function (e) {
+        content.classesPage()
+    })
+}
+function addNewStudentsPage() {
+    content.addStudentsPage();
+    saveNewStudent()
+}
+
+function saveNewStudent() {
+    
+    const saveBtn = document.querySelector("#saveBtn");
+    saveBtn.addEventListener("click", function(event){
+        const form = document.getElementById("studentForm");
+    
+        const name = form.querySelector("#name").value;
+        const studentClass = form.querySelector("#class").value;
+        const info = form.querySelector("#info").value;
+    
+        const student = {
+            name,
+            class: studentClass,
+            info
+        };
+    
+        const studentsData = JSON.parse(localStorage.getItem("students")) || [];
+        studentsData.push(student);
+        localStorage.setItem("students", JSON.stringify(studentsData));
+    
+        alert("Student saved successfully!");
+    });
+}
+
+
+function addNewTeachersPage() {
+    content.addTeachersPage()
+    saveNewTeacher()
+}
+
+function saveNewTeacher() {
+    
+    const saveBtn = document.querySelector("#saveBtn");
+    saveBtn.addEventListener("click", function(event){
+        const form = document.getElementById("teacherForm");
+    
+        const name = form.querySelector("#name").value;
+        const teacherDepartment = form.querySelector("#class").value;
+        const info = form.querySelector("#info").value;
+    
+        const teacher = {
+            name,
+            class: teacherDepartment,
+            info
+        };
+    
+        const teachersData = JSON.parse(localStorage.getItem("teachers")) || [];
+        teachersData.push(teacher);
+        localStorage.setItem("teachers", JSON.stringify(teachersData));
+    
+        alert("Teacher saved successfully!");
+    });
+}
 
 
 function getElementNavbar(){
@@ -135,5 +190,9 @@ export default {
     addEventListenerSideBar,
     addEventListenerNavBar,
     addEventItemsToData,
-    openStudentsModal
+    addNewStudentsPage,
+    addNewTeachersPage,
+    detailButtonOfClass,
+    saveNewStudent,
+    saveNewTeacher
 }
