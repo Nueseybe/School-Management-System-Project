@@ -71,10 +71,6 @@ function render(content){
     document.getElementById('page-info').innerHTML = content;
 }
 
-function addStudentsPage(){
-    addStudentsPageTemplate();
-}
-
 export default {
     webEngineeringPage,
     dataSciencePage,
